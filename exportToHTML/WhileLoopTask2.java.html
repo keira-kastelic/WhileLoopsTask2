@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>WhileLoopTask2.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #629755; font-style: italic;}
+.s3 { color: #6a8759;}
+.s4 { color: #808080;}
+.s5 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+WhileLoopTask2.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.Random</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+<span class="s2">/**</span>
+ <span class="s2">* Auto Coin Lab</span>
+ <span class="s2">* Author: Keira</span>
+ <span class="s2">* Collaborator(s): Megan</span>
+ <span class="s2">* On My Honor, I confirm that I followed all collaboration policy guidelines and that the work I am submitting is my own: KAK</span>
+ <span class="s2">**/</span>
+<span class="s0">public class </span><span class="s1">WhileLoopTask2 {</span>
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Task 1:&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// printing the task</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Enter a secret phrase:&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// prompting the user to enter a phrase</span>
+        <span class="s1">Scanner user = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">; </span><span class="s4">// creating a scanner</span>
+        <span class="s1">String input = user.nextLine()</span><span class="s0">; </span><span class="s4">// reading in the users input</span>
+        <span class="s1">String phrase = </span><span class="s3">&quot;I ate the last cookie&quot;</span><span class="s0">; </span><span class="s4">// creating a correct phrase</span>
+        <span class="s0">while </span><span class="s1">(!phrase.equals(input)) { </span><span class="s4">// creating a while loop for if the phrase is not correct</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;Try again&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// printing try again</span>
+            <span class="s1">input = user.nextLine()</span><span class="s0">; </span><span class="s4">// reading in the users new input and updating the variable</span>
+        <span class="s1">}</span><span class="s0">if </span><span class="s1">(phrase.equals(input))</span><span class="s0">;</span><span class="s1">{ </span><span class="s4">// creating an if statement to see if the phrase is correct</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;Correct!&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// printing correct</span>
+        <span class="s1">}</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Task 2&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// printing the task</span>
+        <span class="s1">String username = </span><span class="s3">&quot;KDSstudent&quot;</span><span class="s0">; </span><span class="s4">// creating a username</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Enter a username:&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// prompting the user</span>
+        <span class="s1">Scanner name = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">; </span><span class="s4">// creating a scanner</span>
+        <span class="s1">String userUsername = name.nextLine()</span><span class="s0">; </span><span class="s4">// reading in the users input</span>
+        <span class="s1">String password = </span><span class="s3">&quot;KentDenver&quot;</span><span class="s0">; </span><span class="s4">// creating a password</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Enter a password:&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// prompting the user</span>
+        <span class="s1">Scanner word = </span><span class="s0">new </span><span class="s1">Scanner (System.in)</span><span class="s0">; </span><span class="s4">// creating a new scanner</span>
+        <span class="s1">String userPassword = word.nextLine()</span><span class="s0">; </span><span class="s4">// reading in the users input</span>
+        <span class="s0">int </span><span class="s1">numTries = </span><span class="s5">1</span><span class="s0">; </span><span class="s4">// creating a variable to find the tries it takes for the user to enter the correct information</span>
+        <span class="s0">while </span><span class="s1">((!userUsername.equals(username) || !userPassword.equals(password)) &amp;&amp; numTries &lt; </span><span class="s5">3</span><span class="s1">) { </span><span class="s4">// creating a while statement for the correct info and less that 3 tries</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;Try again:&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// prompting the user</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;Enter a username&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// prompting the user</span>
+            <span class="s1">userUsername = name.nextLine()</span><span class="s0">; </span><span class="s4">// reading in the users input</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;Enter a password:&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// prompting the user</span>
+            <span class="s1">userPassword = word.nextLine()</span><span class="s0">; </span><span class="s4">// reading in the users input</span>
+            <span class="s1">numTries++</span><span class="s0">; </span><span class="s4">// updating the number of tries it took</span>
+        <span class="s1">} </span><span class="s0">if </span><span class="s1">(userUsername.equals(username) &amp;&amp; userPassword.equals(password)) { </span><span class="s4">// creating an if statement for if the info is correct</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;Correct!&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// printing correct</span>
+        <span class="s1">}</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Task 3 and 4&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// printing the task</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Enter a number. Enter -999 to stop.&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// prompting the user</span>
+        <span class="s1">Scanner num = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">; </span><span class="s4">// creating a scanner</span>
+        <span class="s0">int </span><span class="s1">enteredNum = num.nextInt()</span><span class="s0">; </span><span class="s4">// reading in the users input</span>
+        <span class="s0">int </span><span class="s1">stop = -</span><span class="s5">999</span><span class="s0">; </span><span class="s4">// creating a stop variable</span>
+        <span class="s0">int </span><span class="s1">count = </span><span class="s5">0</span><span class="s0">; </span><span class="s4">// creating a count variable for the amount of inputs</span>
+        <span class="s0">int </span><span class="s1">sum = </span><span class="s5">0</span><span class="s0">; </span><span class="s4">// creating a sum variable for the numbers entered</span>
+        <span class="s0">while </span><span class="s1">(enteredNum != stop){ </span><span class="s4">// creating a while statement for if they did not enter stop</span>
+            <span class="s1">sum += enteredNum</span><span class="s0">; </span><span class="s4">// adding the entered number to the sum</span>
+            <span class="s1">count ++</span><span class="s0">; </span><span class="s4">// updating the count variable</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;Enter a number. Enter -999 to stop.&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// prompting the user</span>
+            <span class="s1">enteredNum = num.nextInt()</span><span class="s0">; </span><span class="s4">// reading in the users new input</span>
+        <span class="s1">}</span>
+        <span class="s0">if </span><span class="s1">(count == </span><span class="s5">0</span><span class="s1">) { </span><span class="s4">// creating an if statement for if they only entered one</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;The average is 0&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// printing out the answer</span>
+        <span class="s1">}</span><span class="s0">else </span><span class="s1">{ </span><span class="s4">// creating an else statement for if they enter multiple numbers</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;The average is &quot; </span><span class="s1">+ (sum/count))</span><span class="s0">; </span><span class="s4">// finding the average and printing it out</span>
+        <span class="s1">}</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Task 5&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// printing the task</span>
+        <span class="s1">Random number = </span><span class="s0">new </span><span class="s1">Random()</span><span class="s0">; </span><span class="s4">// creating a random class</span>
+        <span class="s0">int </span><span class="s1">randomNum = number.nextInt(</span><span class="s5">10</span><span class="s1">)+</span><span class="s5">1</span><span class="s0">; </span><span class="s4">// creating the random number bound from 1 to 10</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Guess a number between 1 and 10&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// prompting the user</span>
+        <span class="s1">Scanner guess = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">; </span><span class="s4">// creating a scanner</span>
+        <span class="s0">int </span><span class="s1">userGuess = guess.nextInt()</span><span class="s0">; </span><span class="s4">// reading in the users input</span>
+        <span class="s0">int </span><span class="s1">tries = </span><span class="s5">1</span><span class="s0">; </span><span class="s4">// creating a tries variable</span>
+         <span class="s0">while</span><span class="s1">(userGuess != randomNum){ </span><span class="s4">// creating a while loop for it the guess is the generated number</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;Wrong! Guess again:&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// printing out if it is wrong</span>
+            <span class="s1">userGuess = guess.nextInt()</span><span class="s0">; </span><span class="s4">// reading in the users new input</span>
+            <span class="s1">tries++</span><span class="s0">; </span><span class="s4">// updating the amount of tries</span>
+        <span class="s1">}</span>
+        <span class="s0">if</span><span class="s1">(userGuess == randomNum){ </span><span class="s4">// creating an if statement for it is the correct number</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;Correct! the number was &quot;</span><span class="s1">+ randomNum)</span><span class="s0">; </span><span class="s4">// printing out the correct number</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;It took you &quot; </span><span class="s1">+ tries + </span><span class="s3">&quot; tries&quot;</span><span class="s1">)</span><span class="s0">; </span><span class="s4">// printing out the amount of tries</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
